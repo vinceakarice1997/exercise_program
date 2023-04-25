@@ -1,0 +1,17 @@
+def print_diamond(n):
+
+
+	for y in range(n):
+		if (n%2==0):
+			if (y<n/2):
+				print("*"*(round((n/2)-y))," "*(2*y),"*"*(round(n/2-y)),sep="")
+			else:
+				print("*"*(y-round(n/2)+1)," "*2*(n-y-1),"*"*(y-round(n/2)+1),sep="")
+		else:
+			if(y==(n-1) or y == 0):
+				print("*"*n)
+			else:
+				if (y<n/2):
+					print("*"*((n+1)//2-y) , " "*(2*y-1) , "*"*((n+1)//2-y),sep="")
+				else:
+					print("*"*(y-(n//2)+1) , " "*(2*(n-y)-3), "*"*(y-(n//2)+1) ,sep="")
